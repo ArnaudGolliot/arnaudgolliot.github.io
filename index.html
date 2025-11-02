@@ -8,9 +8,9 @@
     body {
       font-family: "Segoe UI", sans-serif;
       background-color: #f4f4f9;
-      color: #333;
       margin: 0;
       padding: 20px;
+      color: #333;
     }
 
     header {
@@ -22,42 +22,54 @@
       color: #222;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
       background-color: white;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    th, td {
-      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       text-align: center;
-      border-bottom: 1px solid #ddd;
+      padding: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    th {
-      background-color: #007acc;
-      color: white;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     }
 
-    tr:hover {
-      background-color: #f0f8ff;
-    }
-
-    img {
-      width: 80px;
+    .card img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
       border-radius: 8px;
+      margin-bottom: 10px;
     }
 
-    a {
-      text-decoration: none;
+    .card h3 {
+      margin: 10px 0;
+      font-size: 1.1em;
       color: #007acc;
-      font-weight: 600;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .card a {
+      display: inline-block;
+      margin-top: 5px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #007acc;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+
+    .card a:hover {
+      background-color: #005f99;
     }
   </style>
 </head>
@@ -68,77 +80,63 @@
     <p>Bienvenue sur ma page — vous trouverez ici mes principaux documents et projets.</p>
   </header>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Image</th>
-        <th>Titre du document</th>
-        <th>Lien</th>
-      </tr>
-    </thead>
+  <div class="grid-container">
 
-    <tbody>
+    <div class="card">
+      <img src="images/carte_mentale.png" alt="Carte Mentale">
+      <h3>Carte Mentale</h3>
+      <a href="docs/OPC_P13_Carte_Mentale_v0r16.pdf" target="_blank">Ouvrir</a>
+    </div>
 
-   
-      <tr>
-        <td><img src="images/carte_mentale.png" alt="Doc 1"></td>
-        <td>Carte Mentale</td>
-        <td><a href="docs/OPC_P13_Carte_Mentale_v0r16.pdf" target="_blank">Ouvrir</a></td>
-      </tr>
+    <div class="card">
+      <img src="images/analyse_du_besoin.png" alt="Analyse du besoin">
+      <h3>Analyse du besoin</h3>
+      <a href="docs/OPC_P13_Analyse_du_besoin_du_client_v0r02.pdf" target="_blank">Ouvrir</a>
+    </div>
 
+    <div class="card">
+      <img src="images/cahier_des_charges.png" alt="Cahier des charges">
+      <h3>Cahier des charges</h3>
+      <a href="docs/OPC_P13_Cahier_des_charges_fonctionnel_du_projet_Elaborer_un_portfolio_v0r19.pdf" target="_blank">Ouvrir</a>
+    </div>
 
-      <tr>
-        <td><img src="images/analyse du besoin.png" alt="Doc 2"></td>
-        <td>Analyse du besoin</td>
-        <td><a href="docs/OPC_P13_Analyse du besoin du client_v0r02.pdf" target="_blank">Ouvrir</a></td>
-      </tr>
+    <div class="card">
+      <img src="images/diagramme_de_gantt.png" alt="Diagramme de Gantt">
+      <h3>Diagramme de Gantt</h3>
+      <a href="docs/OPC_P13_GANTT_v0r06.pdf" target="_blank">Ouvrir</a>
+    </div>
 
+    <div class="card">
+      <img src="images/Portfolio.png" alt="Portfolio">
+      <h3>Portfolio des projets data</h3>
+      <a href="docs/OPC_P13_Portfolio-des-projets-parcours-Data-Analyst_v0r01.pdf" target="_blank">Ouvrir</a>
+    </div>
 
-      <tr>
-        <td><img src="images/cahier des charges.png" alt="Doc 3"></td>
-        <td>Cahier des charges fonctionnel</td>
-        <td><a href="docs/OPC_P13_Cahier des charge fonctionnel du projet Elaborer un portfolio_v0r19.pdf" target="_blank">Ouvrir</a></td>
-      </tr>
+    <div class="card">
+      <img src="images/dashboard_portfolio.png" alt="Dashboard Portfolio">
+      <h3>Dashboard des projets data</h3>
+      <a href="docs/P13_L5_Portfolio_Projets_Dashboard_v0r15.pdf" target="_blank">Ouvrir</a>
+    </div>
 
-      <tr>
-        <td><img src="images/diagramme de gantt.png" alt="Doc 4"></td>
-        <td>Diagramme de Gantt</td>
-        <td><a href="docs/OPC_P13_GANTT_v0r06.pdf" target="_blank">Ouvrir</a></td>
-      </tr>
+    <div class="card">
+      <img src="images/dashboard_VI.png" alt="Dashboard Veille">
+      <h3>Dashboard de veille informationnelle</h3>
+      <a href="docs/OPC_P13_Veille_Informationnelle_v0r06.pdf" target="_blank">Ouvrir</a>
+    </div>
 
-      <tr>
-        <td><img src="images/Portfolio.png" alt="Doc 5"></td>
-        <td>Portfolio des projets data</td>
-        <td><a href="docs/OPC_P13_Portfolio-des-projets-parcours-Data-Analyst_v0r01.pdf" target="_blank">Ouvrir</a></td>
-      </tr>
+    <div class="card">
+      <img src="images/Tutorial.png" alt="Tutoriel Power BI">
+      <h3>Tutoriel Power BI</h3>
+      <a href="docs/OPC_P13_Tutoriel_Power_BI_v0r03.mp4" target="_blank">Ouvrir</a>
+    </div>
 
-      <tr>
-        <td><img src="images/dashboard_portfolio.png" alt="Doc 6"></td>
-        <td>Dashboard des projets data</td>
-        <td><a href="docs/P13_L5_Portfolio_Projets_Dashboard_v0r15.pdf" target="_blank">Ouvrir</a></td>
-      </tr>
+    <div class="card">
+      <img src="images/User_Guide.png" alt="User Guide">
+      <h3>Manuel Power BI</h3>
+      <a href="docs/OPC_P13_Guide_d_utilisation_Power_BI_v0r08.pdf" target="_blank">Ouvrir</a>
+    </div>
 
-      <tr>
-        <td><img src="images/dashboard_VI.png" alt="Doc 7"></td>
-        <td>Dashboard de veille informationnelle</td>
-        <td><a href="docs/OPC_P13_Veille_Informationnelle_v0r06.pdf" target="_blank">Ouvrir</a></td>
-      </tr>
-
-      <tr>
-        <td><img src="images/Tutorial.png" alt="Doc 8"></td>
-        <td>Tutoriel d'initiation à Power BI</td>
-        <td><a href="docs/OPC_P13_Tutoriel Power BI_v0r03.mp4" target="_blank">Ouvrir</a></td>
-      </tr>
-
-      <tr>
-        <td><img src="images/User Guide.png" alt="Doc 9"></td>
-        <td>Manuel de prise en main de Power BI</td>
-        <td><a href="docs/OPC_P13_Guide d'utilisation Power BI_v0r08.pdf" target="_blank">Ouvrir</a></td>
-      </tr>
-
-    </tbody>
-
-  </table>
+  </div>
 
 </body>
 </html>
