@@ -1,29 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenue sur mon site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: 50px auto;
-            text-align: center;
-            background-color: #f5f5f5;
-        }
-        h1 {
-            color: #333;
-        }
-        a {
-            color: #007acc;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Arnaud Golliot</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007acc;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f0f8ff;
+    }
+
+    img {
+      width: 80px;
+      border-radius: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007acc;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <h1>Bonjour, je suis Arnaud Golliot</h1>
-    <p>Bienvenue sur mon site personnel !</p>
-    <p>Tu peux retrouver ici mes documents, projets, et infos de contact.</p>
-    <a href="mailto:arnaud.golliot.dufour@gmail.com">Me contacter</a>
+
+  <header>
+    <h1>Portfolio de Arnaud Golliot</h1>
+    <p>Bienvenue sur ma page — vous trouverez ici mes principaux documents et projets.</p>
+  </header>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Titre du document</th>
+        <th>Lien</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="images/document1.jpg" alt="Doc 1"></td>
+        <td>Analyse de données - Projet A</td>
+        <td><a href="docs/projetA.pdf" target="_blank">Ouvrir</a></td>
+      </tr>
+      <tr>
+        <td><img src="images/document2.jpg" alt="Doc 2"></td>
+        <td>Tableau de bord Power BI</td>
+        <td><a href="docs/powerbi_dashboard.pdf" target="_blank">Ouvrir</a></td>
+      </tr>
+      <tr>
+        <td><img src="images/document3.jpg" alt="Doc 3"></td>
+        <td>Rapport de mission</td>
+        <td><a href="docs/rapport.pdf" target="_blank">Ouvrir</a></td>
+      </tr>
+    </tbody>
+  </table>
+
 </body>
 </html>
