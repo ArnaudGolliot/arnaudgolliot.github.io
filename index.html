@@ -25,16 +25,24 @@
       left: 20px;
       top: 50%;
       transform: translateY(-50%);
-      width: 70px;       /* taille de l’avatar */
+      width: 70px;
       height: 70px;
-      border-radius: 50%; /* rond */
+      border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
     h1 {
       color: #222;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 1em;
+      color: #555;
+      max-width: 750px;
+      margin: 0 auto 10px auto;
+      line-height: 1.5;
     }
 
     .grid-container {
@@ -60,7 +68,7 @@
     /* ↓ Réduction des images d’environ 20% ↓ */
     .card img {
       width: 80%;
-      max-height: 120px; /* avant : 150px */
+      max-height: 120px;
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 10px;
@@ -79,10 +87,10 @@
       text-decoration: none;
       color: #fff;
       background-color: #007acc;
-      padding: 6px 10px; /* avant : 8px 12px */
-      border-radius: 4px; /* avant : 5px */
+      padding: 6px 10px;
+      border-radius: 4px;
       font-weight: 600;
-      font-size: 0.9em; /* plus petit */
+      font-size: 0.9em;
       transition: background-color 0.2s;
     }
 
@@ -94,9 +102,11 @@
 <body>
 
   <header>
-    <img src="images/AG_photo.jpg" alt="Photo Profil" class="avatar">
+    <img src="images/avatar.png" alt="Photo de profil" class="avatar">
     <h1>Portfolio de Arnaud Golliot</h1>
-    <p>Bienvenue sur ma page — vous trouverez ici mes principaux documents et projets.</p>
+    <p class="subtitle">
+      Consultant Freelance spécialisé en Data et Management de projet, je mets 25 ans d’expérience en pilotage SI (MOA/MOE, PMO) au service de projets data à fort impact, notamment dans l’Économie Sociale et Solidaire.
+    </p>
   </header>
 
   <div class="grid-container">
