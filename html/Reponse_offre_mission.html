@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<!-- VERSION V0R01 -->
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Arnaud Golliot</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+
+    header {
+      text-align: center;
+      /* padding: 50px 20px 30px; */
+      padding: 5px 15px 10px; 
+      background: linear-gradient(135deg, #007acc, #00a6c9);
+      color: white;
+      position: relative;
+      max-width: 80%;
+      margin: 0 auto 40px auto;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .avatar {
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      border: 2px solid white;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+
+    /* --- Grille des documents optimisée pour 1080p --- */
+    .subtitle {
+      font-size: 1.05em;
+      /* max-width: 800px; */
+      max-width: 80%;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #f1f1f1;
+    }
+
+    /* --- Grille des documents optimisée pour 1080p --- */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+      padding: 0 10px;
+      justify-items: center;
+    }
+
+    /* 2ème ligne de 4 cartes centrée */
+    .grid-container .card:nth-child(n+6) {
+      grid-column: span 1;
+    }
+
+    /* Responsive tablette */
+    @media (max-width: 1024px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Responsive mobile */
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      text-align: center;
+      padding: 15px;
+      width: 100%;
+      max-width: 200px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 80%;
+      max-height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      font-size: 1.1em;
+      color: #007acc;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 5px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #007acc;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: background-color 0.2s;
+    }
+
+    .card a:hover {
+      background-color: #005f99;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #007acc;
+      color: white;
+      font-size: 0.9em;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/AG_photo.jpg" alt="Photo de profil" class="avatar">
+    <h1>Portfolio de Arnaud Golliot</h1>
+    <p class="subtitle"><i>
+      Réponse à offre de mission (factice)
+    </i></p>
+  </header>
+
+  <!-- Grille de documents optimisée -->
+  <div class="grid-container">
+
+    <div class="card">
+      <img src="images/analyse_du_besoin.png" alt="Analyse du besoin">
+      <h3>Analyse du besoin</h3>
+      <a href="docs/OPC_P13_Analyse_du_besoin_du_client_v0r02.pdf" target="_blank">Ouvrir</a>
+    </div>
+
+    <div class="card">
+      <img src="images/cahier_des_charges.png" alt="Cahier des charges">
+      <h3>Cahier des charges</h3>
+      <a href="docs/OPC_P13_Cahier_des_charges_fonctionnel_du_projet_Elaborer_un_portfolio_v0r20.pdf" target="_blank">Ouvrir</a>
+    </div>
+
+    <div class="card">
+      <img src="images/diagramme_de_gantt.png" alt="Diagramme de Gantt">
+      <h3>Diagramme de Gantt</h3>
+      <a href="docs/OPC_P13_GANTT_v0r06.pdf" target="_blank">Ouvrir</a>
+    </div>
+
+
+  </div>
+
+  <footer>
+    © 2025 Arnaud Golliot — Portfolio Data & Management de projet
+  </footer>
+
+</body>
+</html>
 
